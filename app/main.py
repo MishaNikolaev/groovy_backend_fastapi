@@ -6,7 +6,8 @@ from app.api.v1.endpoints import (
     tracks as tracks_router,
     playlist as playlists_router,
     album as albums_router,
-    likes as likes_router
+    likes as likes_router,
+    auth as auth_router
 )
 
 app = FastAPI(
@@ -24,6 +25,7 @@ app.include_router(tracks_router.router)
 app.include_router(playlists_router.router)
 app.include_router(albums_router.router)
 app.include_router(likes_router.router)
+app.include_router(auth_router.router)
 
 if __name__ == "__main__":
     import uvicorn
