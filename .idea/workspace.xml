@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf875a4-ad73-40e7-abb3-346acc6090cf" name="Changes" comment="I did load music from file and @GET">
-      <change afterPath="$PROJECT_DIR$/app/api/v1/endpoints/album.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/v1/endpoints/likes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/v1/endpoints/playlist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/album.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/playlist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/album_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/like_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/playlist_service.py" afterDir="false" />
+    <list default="true" id="bdf875a4-ad73-40e7-abb3-346acc6090cf" name="Changes" comment="I started working with auth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/v1/endpoints/tracks.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/endpoints/tracks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/v1/endpoints/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/endpoints/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/v1/endpoints/likes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/endpoints/likes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/track.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/music_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/music_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/auth_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/like_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/like_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,36 +28,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MishaNikolaev"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MishaNikolaev&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MishaNikolaev/groovy_backend_fastapi.git",
-    "accountId": "5ba8f7e0-c178-4410-904f-05b715d17eff"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MishaNikolaev/groovy_backend_fastapi.git&quot;,
+    &quot;accountId&quot;: &quot;5ba8f7e0-c178-4410-904f-05b715d17eff&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2vzR6KXjmiixilWOns0no1fGoOs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/nmichail/PycharmProjects/groovy_backend_fastapi/app/static/covers"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nmichail/groovy_backend_fastapi&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/static/covers" />
@@ -136,12 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1745148898556</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="I started working with auth">
+      <option name="closed" value="true" />
+      <created>1745428434886</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745428434886</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="I did load music from file and @GET" />
-    <option name="LAST_COMMIT_MESSAGE" value="I did load music from file and @GET" />
+    <MESSAGE value="I started working with auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="I started working with auth" />
   </component>
 </project>
