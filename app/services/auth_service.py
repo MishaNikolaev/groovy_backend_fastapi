@@ -18,14 +18,18 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/token")
 
 
 class AuthService:
+
     def __init__(self):
         self.users_db: Dict[str, UserInDB] = {}
+        self.pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+        self.oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/token")
 
     def verify_password(self, plain_password: str, hashed_password: str):
-        return pwd_context.verify(plain_password, hashed_password)
+        return self.pwd_context.verify(plain_password, hashed_password)
 
     def get_password_hash(self, password: str):
-        return pwd_context.hash(password)
+        return self.pwd_context.hash(password)
+
 
     def get_user(self, username: str) -> Optional[UserInDB]:
         for user in self.users_db.values():

@@ -1,4 +1,3 @@
-# app/main.py
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
@@ -12,8 +11,8 @@ async def lifespan(app: FastAPI):
     if not auth_service.get_user("admin"):
         auth_service.create_user(UserCreate(
             username="admin",
-            email="admin@example.com",
-            password="adminpassword",
+            email="admin@mail.ru",
+            password="qw123",
             full_name="Admin User"
         ))
         admin = auth_service.get_user("admin")
@@ -21,13 +20,32 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(
-    title="Music API",
-    description="Groovy API with playlists, albums and likes",
+    title="Groovy Music API",
+    description="""🚀 Полнофункциональное API для музыкального сервиса с:
+    \n- Аутентификацией JWT
+    \n- Управлением треками, альбомами, плейлистами
+    \n- Лайками и избранным
+    \n- Поиском музыки""",
     version="1.0.0",
+    contact={
+        "name": "Mikhail Nikolaev",
+        "email": "nmichail154@mail.ru",
+    },
+    license_info={
+        "name": "MIT",
+    },
     docs_url="/api/docs",
     redoc_url="/api/redoc",
     openapi_url="/api/openapi.json",
-    lifespan=lifespan
+    lifespan=lifespan,
+    swagger_ui_parameters={
+        "syntaxHighlight": True,
+        "tryItOutEnabled": True,
+        "displayRequestDuration": True,
+        "filter": True,
+        "tagsSorter": "alpha",
+        "operationsSorter": "method",
+    }
 )
 
 app.add_middleware(

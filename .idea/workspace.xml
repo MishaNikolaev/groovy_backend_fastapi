@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf875a4-ad73-40e7-abb3-346acc6090cf" name="Changes" comment="I started working with auth">
+    <list default="true" id="bdf875a4-ad73-40e7-abb3-346acc6090cf" name="Changes" comment="keep on working with auth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/v1/endpoints/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/endpoints/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/v1/endpoints/likes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/endpoints/likes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/auth_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/like_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/like_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,13 +131,22 @@
       <option name="project" value="LOCAL" />
       <updated>1745428434886</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="keep on working with auth">
+      <option name="closed" value="true" />
+      <created>1745589788536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745589788536</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="I did load music from file and @GET" />
     <MESSAGE value="I started working with auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="I started working with auth" />
+    <MESSAGE value="keep on working with auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="keep on working with auth" />
   </component>
 </project>
