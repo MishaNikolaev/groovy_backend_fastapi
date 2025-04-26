@@ -23,6 +23,14 @@ class MusicService:
         ]
         self.current_id = 1
 
+    def get_tracks(self, skip: int, limit: int, genre: str = None, artist_id: int = None) -> List[Track]:
+        filtered = self.music_library
+        if genre:
+            filtered = [t for t in filtered if t.genre.lower() == genre.lower()]
+        if artist_id:
+            filtered = [t for t in filtered if t.artist_id == artist_id]
+        return filtered[skip: skip + limit]
+
     def get_all_tracks(self) -> List[Track]:
         return self.music_library
 
@@ -37,8 +45,7 @@ class MusicService:
 
     def search_tracks(self, query: str) -> List[Track]:
         return [track for track in self.music_library
-                if query.lower() in track.title.lower()
-                or query.lower() in track.artist.lower()]
+                if query.lower() in track.title.lower()]
 
     def get_audio_file(self, track_id: int):
         track = self.get_track_by_id(track_id)

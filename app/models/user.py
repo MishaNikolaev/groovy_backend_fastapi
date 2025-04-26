@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-from typing import Optional
+from typing import Optional, List, Union, Dict
 from uuid import UUID
 from datetime import datetime
 
@@ -23,6 +23,7 @@ class UserInDB(UserBase):
     is_superuser: bool = False
     created_at: datetime
     last_login: Optional[datetime] = None
+    listening_history: List[Dict[str, Union[int, datetime]]] = []
 
     class Config:
         from_attributes = True
